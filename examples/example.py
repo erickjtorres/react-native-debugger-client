@@ -9,10 +9,11 @@ import sys
 import os
 import time
 
+from react_native_debugger_client.client import ReactNativeDebuggerClient
+
 # Add the parent directory to the path so we can import the react_native_client package
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from hermes_inspector import HermesInspector
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -26,7 +27,7 @@ async def main():
     logger.info(f"Connecting to React Native app's Hermes debugger at {DEVICE_IP}:{METRO_PORT}")
     
     # Create an inspector instance
-    inspector = HermesInspector(DEVICE_IP, METRO_PORT)
+    inspector = ReactNativeDebuggerClient(DEVICE_IP, METRO_PORT)
     
     try:
         # Connect to the app with increased timeout
