@@ -94,13 +94,6 @@ with ReactNativeDebuggerClient() as client:
 - `enter_text_by_type(widget_type, text, timeout=5)` - Enter text in a widget by its type
 - `enter_text_by_text(widget_text, text, timeout=5)` - Enter text in a widget by its text content
 
-### Debug Utilities
-
-- `toggle_debug_paint_feature(enable=True, timeout=5)` - Toggle debug paint feature
-- `toggle_performance_overlay(enable=True, timeout=5)` - Toggle performance overlay
-- `toggle_repaint_rainbow(enable=True, timeout=5)` - Toggle repaint rainbow
-- `toggle_debug_banner(enable=True, timeout=5)` - Toggle debug banner
-
 ## Requirements
 
 - Python 3.7+
